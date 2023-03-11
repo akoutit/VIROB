@@ -12,7 +12,7 @@ def normalize_trans(points):
         points (np.ndarray): points to normalize, shape (n, 2)
     Return:
         np.ndarray: similarity transformation for normalizing these points, shape (3, 3)
-    """
+   
     pass
 
 
