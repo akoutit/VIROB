@@ -6,8 +6,7 @@ import numpy as np
 
 
 def normalize_trans(points):
-    """TODO: Compute a transformation which translates and scale the inputted points such that
-        their center is at the origin and their average distance to the origin is sqrt(2) using Equation.(21)
+    
 
     Args:
         points (np.ndarray): points to normalize, shape (n, 2)
@@ -74,7 +73,7 @@ class Image:
         return corners.squeeze()
 
     def get_landmark_world_coordinate(self):
-        """TODO: Compute 3D coordinate for each chessboard's corner. Assumption:
+        """
 
                 * world origin is located at the 1st corner
                 * x-axis is from corner 0 to corner 1 till corner 7,
@@ -86,7 +85,7 @@ class Image:
         pass
 
     def find_homography(self):
-        """TODO: Find the homography H that maps plane_pts to im_pts using Equation.(8)
+        """
 
         Return:
             np.ndarray: homography, shape (3, 3)
@@ -110,7 +109,7 @@ class Image:
         return H
 
     def construct_v(self):
-        """TODO: Find the left-hand side of Equation.(16) in the lab subject
+        """
 
         Return:
             np.ndarray: shape (2, 6)
@@ -118,8 +117,7 @@ class Image:
         pass
 
     def find_extrinsic(self, K):
-        """TODO: Find camera pose w.r.t the world frame defined by the chessboard using the homography and camera intrinsic
-            matrix using Equation.(18)
+        """
 
         Arg:
             K (np.ndarray): camera intrinsic matrix, shape (3, 3)
